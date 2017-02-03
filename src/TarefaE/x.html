@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Light-Bot</title>
+<script type="text/javascript" src="http://www.x3dom.org/release/x3dom.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.x3dom.org/release/x3dom.css"/>
+</head>
+<body>
+<h1>Animação</h1>
+<p class="case">
+<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" id="boxes"
+showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px">
+<Scene>
+<Shape DEF="tile">
+<Appearance>
+<Material diffuseColor='0 1.0 1.0'/>
+</Appearance>
+<Box size='3.45 3.45 1.45'/>
+</Shape>
+<Shape DEF="tileL">
+<Appearance>
+<Material diffuseColor='0 0 1.0'/>
+</Appearance>
+<Box size='3.45 3.45 1.45'/>
+</Shape>
+<Transform translation='0.0 7.0 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 7.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 7.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='3.5 7.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 7.0 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 7.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 7.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='10.5 7.0 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='10.5 7.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='10.5 7.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 7.0 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 7.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 7.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 3.5 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 3.5 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 3.5 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='3.5 3.5 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 3.5 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 3.5 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 3.5 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='10.5 3.5 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 3.5 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 3.5 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 3.5 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 0.0 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 0.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 0.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='3.5 0.0 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='3.5 0.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='3.5 0.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 0.0 3.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 0.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='7.0 0.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='10.5 0.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 0.0 3.0'> <Shape USE="tileL"/> </Transform>
+<Transform translation='14.0 0.0 1.5'> <Shape USE="tile"/> </Transform>
+<Transform translation='14.0 0.0 0.0'> <Shape USE="tile"/> </Transform>
+<Transform translation='0.0 7.0 4.5' rotation='0 0 1 0.0'>
+<Transform translation='0 0 2.2' rotation='1 0 0 1.57'>
+<transform DEF="robot">
+<timeSensor DEF="time" cycleInterval="3.75" loop="true"> </timeSensor>
+<PositionInterpolator DEF="movePOS" key="0 6.25e-2 0.125 0.1875 0.25 0.3125 0.375 0.4375 0.5 0.5625 0.625 0.6875 0.75 0.8125 0.875 0.9375 1.0" keyValue="0 0 0, 0.0 0.0 3.5, 0.0 0.0 7.0, 0.0 0.0 7.0, 3.5 0.0 7.0, 7.0 0.0 7.0, 7.0 0.0 7.0, 7.0 0.0 3.5, 7.0 0.0 0.0, 7.0 0.0 0.0, 10.5 0.0 0.0, 14.0 0.0 0.0, 14.0 0.0 0.0, 14.0 0.0 3.5, 14.0 0.0 7.0, 14.0 1.5 7.0, 14.0 0.0 7.0"> </PositionInterpolator>
+<OrientationInterpolator DEF="moveROT" key="0 6.666667e-2 0.13333334 0.20000002 0.26666668 0.33333334 0.40000004 0.4666667 0.53333336 0.6 0.6666667 0.73333335 0.8000001 0.86666673 0.9333334 1.0" keyValue="0 0 0 0, 0 0 0 0, 0 0 0 0, 0 1 0 1.57, 0 1 0 1.57, 0 1 0 1.57, 0 1 0 3.14, 0 1 0 3.14, 0 1 0 3.14, 0 1 0 1.57, 0 1 0 1.57, 0 1 0 1.57, 0 1 0 0.0, 0 1 0 0.0, 0 1 0 0.0, 0 1 0 0.0"> </OrientationInterpolator>
+<Route fromNode="time" fromField ="fraction_changed" toNode="movePOS" toField="set_fraction"> </Route>
+<Route fromNode="movePOS" fromField ="value_changed" toNode="robot" toField="translation"> </Route>
+<Route fromNode="time" fromField ="fraction_changed" toNode="moveROT" toField="set_fraction"> </Route>
+<Route fromNode="moveROT" fromField ="value_changed" toNode="robot" toField="rotation"> </Route>
+<transform translation='0 2 0'>
+<shape>
+<appearance>
+<material diffuseColor='1 1 1'></material>
+</appearance>
+<sphere radius='0.8'></sphere>
+</shape>
+</transform>
+<transform translation='0 0.3 0'>
+<shape>
+<appearance>
+<material diffuseColor='1 1 1'></material>
+</appearance>
+<sphere radius='1.1'></sphere>
+</shape>
+</transform>
+<transform translation='0 -1.8 0'>
+<shape>
+<appearance>
+<material diffuseColor='1 1 1'></material>
+</appearance>
+<sphere radius='1.5'></sphere>
+</shape>
+</transform>
+<transform translation='0.2 2.1 0.8'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.15'></sphere>
+</shape>
+</transform>
+<transform translation='-0.2 2.1 0.8'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.15'></sphere>
+</shape>
+</transform>
+<transform translation='-0.3 1.6 0.65'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.05'></sphere>
+</shape>
+</transform>
+<transform translation='-0.2 1.55 0.6'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.05'></sphere>
+</shape>
+</transform>
+<transform translation='-0.1 1.5 0.6'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.05'></sphere>
+</shape>
+</transform>
+<transform translation='0 1.5 0.6'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.05'></sphere>
+</shape>
+</transform>
+<transform translation='0.1 1.5 0.6'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.05'></sphere>
+</shape>
+</transform>
+<transform translation='0.2 1.55 0.6'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.05'></sphere>
+</shape>
+</transform>
+<transform translation='0.3 1.6 0.65'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.05'></sphere>
+</shape>
+</transform>
+<transform translation='0 0.65 1'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.15'></sphere>
+</shape>
+</transform>
+<transform translation='0 0.25 1'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.15'></sphere>
+</shape>
+</transform>
+<transform translation='0 -0.15 0.9'>
+<shape>
+<appearance>
+<material diffuseColor='0 0 0'></material>
+</appearance>
+<sphere radius='0.15'></sphere>
+</shape>
+</transform>
+<Transform rotation='1 0 0 1.57' translation='0 1.8 0.55'>
+<Shape>
+<Appearance>
+<Material diffuseColor='1 0.271 0'></material>
+</Appearance>
+<Cone bottomRadius='0.3' height='1.75'/>
+</Shape>
+</Transform>
+<Transform translation='0 1.32 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='1 0 0'/>
+</Appearance>
+<Cylinder height='0.175' radius='0.7'/>
+</Shape>
+</Transform>
+<Transform translation='.7 0.62 .8'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0 0 1'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform translation='.725 0.72 0.85'>
+<Shape>
+<Appearance>
+<Material diffuseColor='1 0 0'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform translation='.7 0.85 .8'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0 0 1'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform translation='.7 0.98 .7'>
+<Shape>
+<Appearance>
+<Material diffuseColor='1 0 0'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform translation='.7 1.035 .55'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0 0 1'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform translation='.7 1.12 .45'>
+<Shape>
+<Appearance>
+<Material diffuseColor='1 0 0'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform translation='.7 1.22 .35'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0 0 1'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform translation='.6 1.32 .25'>
+<Shape>
+<Appearance>
+<Material diffuseColor='1 0 0'/>
+</Appearance>
+<Sphere radius='.1'/>
+</Shape>
+</Transform>
+<Transform rotation='0.96225 0.19245 -0.19245 1.57' translation='0.1 1.5 0.55'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0.219608 0.137255 0'/>
+</Appearance>
+<Cylinder radius='0.03'/>
+</Shape>
+</Transform>
+<Transform translation='.45 1.58 1.5'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0.219608 0.137255 0'/>
+</Appearance>
+<Cylinder height='.2' radius='.1'/>
+</Shape>
+</Transform>
+<Transform rotation='0 0 1 1.57' translation='0 0.7 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='.5 .25 .05'/>
+</Appearance>
+<Cylinder height='4.9' radius='0.1'/>
+</Shape>
+</Transform>
+<Transform rotation='0 0.92848 0.37139 1.57' translation='2 0.7 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='.5 .25 .05'/>
+</Appearance>
+<Cylinder height='.9' radius='0.05'/>
+</Shape>
+</Transform>
+<Transform rotation='0.84515 -0.50709 0.16903 1.57' translation='1.5 0.7 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='.5 .25 .05'/>
+</Appearance>
+<Cylinder height='.7' radius='0.03'/>
+</Shape>
+</Transform>
+<Transform rotation='0 0.64018 0.76822 1.57' translation='-1 0.7 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='.5 .25 .05'/>
+</Appearance>
+<Cylinder height='1' radius='0.05'/>
+</Shape>
+</Transform>
+<Transform rotation='0 0.70711 -0.70711 1' translation='-1.9 0.7 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='.5 .25 .05'/>
+</Appearance>
+<Cylinder height='.5' radius='0.04'/>
+</Shape>
+</Transform>
+<Transform translation='0 2.8 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0.003922 0.003922 0.003922'/>
+</Appearance>
+<Cylinder height='1.3' radius='0.5'/>
+</Shape>
+</Transform>
+<Transform translation='0 2.45 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='0.003922 0.003922 0.003922'/>
+</Appearance>
+<Cylinder height='0.15'/>
+</Shape>
+</Transform>
+<Transform translation='0 2.57 0'>
+<Shape>
+<Appearance>
+<Material diffuseColor='1 0 0'/>
+</Appearance>
+<Cylinder height='0.1' radius='0.6'/>
+</Shape>
+</Transform>
+</Transform>
+</Transform>
+</Scene>
+</X3D>
+</p>
+<p> &nbsp; </p>
+</body>
+</html>
