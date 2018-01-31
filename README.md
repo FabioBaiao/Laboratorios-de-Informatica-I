@@ -1,2 +1,2 @@
 ## Contributors
-* João Coelho (github.com/joao-coelho)
+* [João Coelho](github.com/joao-coelho)
